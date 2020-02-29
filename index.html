@@ -11,11 +11,11 @@
     <div class="container">
       <h1>To do List</h1>
       <ul ng-repeat="l in list">
-        <li>{{ l }} <span style="float: right;"> &times; </span></li> <hr>
+        <li>{{ l }} <span ng-click="delete($index)" style="float: right;"> &times; </span></li> <hr>
       </ul>
 
-      <input type="text" placeholder="Enter new task">
-      <input type="button" value="Add">
+      <input type="text" placeholder="Enter new task" ng-model="new">
+      <input type="button" value="Add" ng-click="addItem()">
     </div>
   </body>
 </html>
